@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+ <header></header>
+ <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Our Mobility Services
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Eco-friendly rentals with 10km charging station access and battery swaps for seamless rides.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {% for service in services %}
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">{{ service.name }}</h3>
+                    <p class="text-gray-600 mb-1">{{ service.short_desc }}</p>
+                    <p class="text-gray-500 text-sm">{{ service.description }}</p>
+                </div>
+                {% empty %}
+                <div class="col-span-full text-center py-8">
+                    <p>No services available yet. Add some in the admin!</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

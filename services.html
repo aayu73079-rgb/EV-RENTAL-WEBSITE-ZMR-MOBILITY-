@@ -1,0 +1,543 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %} 
+{% block content %}
+ {% comment %} <section id="home" class="py-20 px-6 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Smart Mobility Solutions
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Revolutionizing urban transportation with eco-friendly 2-wheeler and 3-wheeler rentals, supported by our extensive 10km charging network and battery swap services.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold">
+                    Rent Now
+                </button>
+                <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg text-lg">
+                    Learn More
+                </button>
+            </div>
+        </div> {% endcomment %}
+
+
+
+
+    {% comment %} </section>
+        <section id="plans">
+            <div class="container">
+                <h2>Our Rental Plans</h2>
+                <p>Choose the perfect plan that fits your schedule and budget.</p>
+
+                <div class="plans-grid">
+                    <!-- Plan 1 -->
+                    <div class="plan-card">
+                        <img src="{%static 'images/homephoto.jpg'%}" alt="EV Scooter">
+                        <h3>Hourly Hop</h3>
+                        <p>Perfect for short trips, running errands, or a quick joyride around the city.</p>
+                        <ul>
+                            <li>✔ Up to 2 hours</li>
+                            <li>✔ Pay per minute</li>
+                            <li>✔ Includes one helmet</li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="plan-price">₹2/min</p>
+                            <a href="#" class="plan-button">Rent Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2 (Featured) -->
+                    <div class="plan-card featured">
+                        <span>Most Popular</span>
+                        <img src="https://placehold.co/300x200/d1fae5/059669?text=EV+Scooter" alt="EV Scooter">
+                        <h3>Daily Cruiser</h3>
+                        <p>Your ride for the entire day. Explore the city without watching the clock.</p>
+                        <ul>
+                            <li>✔ 24-hour access</li>
+                            <li>✔ Unlimited Kilometers</li>
+                            <li>✔ Includes helmet & charger</li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="plan-price">₹499/day</p>
+                            <a href="#" class="plan-button">Rent Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3 -->
+                    <div class="plan-card">
+                        <img src="https://placehold.co/300x200/a7f3d0/047857?text=EV+Scooter" alt="EV Scooter">
+                        <h3>Monthly Mover</h3>
+                        <p>The ultimate freedom. Your personal EV scooter for a full 30 days.</p>
+                        <ul>
+                            <li>✔ 30-day rental</li>
+                            <li>✔ Free maintenance</li>
+                            <li>✔ Personal charger included</li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="plan-price">₹5999/month</p>
+                            <a href="#" class="plan-button">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+ <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Flexible Plans for Every Rider</h1>
+                <p>Whether you need a quick ride across town or a scooter for the whole month, we've got you covered. Affordable, convenient, and eco-friendly.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive EV solutions for modern urban transportation</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Electric Scooters</h3>
+                    <p>High-performance electric scooters designed for urban commuting with advanced battery technology and smart connectivity features.</p>
+                    <ul>
+                        <li>Long-range battery life (80+ km)</li>
+                        <li>Smart connectivity & GPS tracking</li>
+                        <li>Eco-friendly zero emissions</li>
+                        <li>Low maintenance cost</li>
+                        <li>Fast charging capability</li>
+                    </ul>
+                    <div class="service-badge">Available in all 5 cities</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>3-Wheeler Vehicles</h3>
+                    <p>Commercial electric 3-wheelers perfect for last-mile delivery and passenger transportation with robust build quality and reliability.</p>
+                    <ul>
+                        <li>Heavy-duty performance</li>
+                        <li>Commercial grade durability</li>
+                        <li>Cost-effective operation</li>
+                        <li>Reliable daily service</li>
+                        <li>High payload capacity</li>
+                    </ul>
+                    <div class="service-badge">Commercial Solutions</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Battery Swapping Network</h3>
+                    <p>Revolutionary battery swapping stations providing instant battery replacement within 10 km range for uninterrupted mobility across all service areas.</p>
+                    <ul>
+                        <li>10 km coverage radius guarantee</li>
+                        <li>Instant 2-minute battery swap</li>
+                        <li>24/7 station availability</li>
+                        <li>Smart monitoring system</li>
+                        <li>Multiple battery backup</li>
+                    </ul>
+                    <div class="service-badge">10 KM Coverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Our Plans Section -->
+        <section id="plans">
+            <div class="container">
+                <h2>Our Rental Plans</h2>
+                <p>Choose the perfect plan that fits your schedule and budget.</p>
+
+                <div class="plans-grid">
+                    <!-- Plan 1 -->
+                    <div class="plan-card">
+                        <img src="https://placehold.co/300x200/e0f2f1/10b981?text=EV+Scooter" alt="EV Scooter">
+                        <h3>Hourly Hop</h3>
+                        <p>Perfect for short trips, running errands, or a quick joyride around the city.</p>
+                        <ul>
+                            <li>✔ Up to 2 hours</li>
+                            <li>✔ Pay per minute</li>
+                            <li>✔ Includes one helmet</li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="plan-price">₹2/min</p>
+                            <a href="#" class="plan-button">Rent Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2 (Featured) -->
+                    <div class="plan-card featured">
+                        <span>Most Popular</span>
+                        <img src="https://placehold.co/300x200/d1fae5/059669?text=EV+Scooter" alt="EV Scooter">
+                        <h3>Daily Cruiser</h3>
+                        <p>Your ride for the entire day. Explore the city without watching the clock.</p>
+                        <ul>
+                            <li>✔ 24-hour access</li>
+                            <li>✔ Unlimited Kilometers</li>
+                            <li>✔ Includes helmet & charger</li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="plan-price">₹499/day</p>
+                            <a href="#" class="plan-button">Rent Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3 -->
+                    <div class="plan-card">
+                        <img src="https://placehold.co/300x200/a7f3d0/047857?text=EV+Scooter" alt="EV Scooter">
+                        <h3>Monthly Mover</h3>
+                        <p>The ultimate freedom. Your personal EV scooter for a full 30 days.</p>
+                        <ul>
+                            <li>✔ 30-day rental</li>
+                            <li>✔ Free maintenance</li>
+                            <li>✔ Personal charger included</li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="plan-price">₹5999/month</p>
+                            <a href="#" class="plan-button">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+            <!-- Franchise Section -->
+    <section id="franchise" class="franchise">
+        <div class="container">
+            <h2 class="section-title">Franchise Opportunities</h2>
+            <p class="section-subtitle">Join the EV Revolution - Complete Business Package for ₹2.5 Lakhs</p>
+            <div class="franchise-content">
+                <div class="franchise-info">
+                    <h3>Partner with ZMR Mobility</h3>
+                    <p>Be part of the sustainable transportation future. Our franchise model offers comprehensive support and proven business success with guaranteed ROI.</p>
+                    
+                    <div class="franchise-package">
+                        <h4>Complete Franchise Package - ₹2.5 Lakhs</h4>
+                        <div class="package-details">
+                            <div class="package-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span><strong>Investment: ₹2.5 Lakhs Only</strong></span>
+                            </div>
+                            <div class="package-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span><strong>20 E-Scooters Included</strong></span>
+                            </div>
+                            <div class="package-item">
+                                <i class="fas fa-battery-full"></i>
+                                <span><strong>Battery Swapping Setup</strong></span>
+                            </div>
+                            <div class="package-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span><strong>10 KM Coverage Area</strong></span>
+                            </div>
+                            <div class="package-item">
+                                <i class="fas fa-charging-station"></i>
+                                <span><strong>Charging Station Setup</strong></span>
+                            </div>
+                            <div class="package-item">
+                                <i class="fas fa-tools"></i>
+                                <span><strong>Complete Training & Support</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="franchise-benefits">
+                        <h4>What You Get</h4>
+                        <ul>
+                            <li>Complete business setup support</li>
+                            <li>Comprehensive training program</li>
+                            <li>Marketing and promotional materials</li>
+                            <li>Ongoing technical assistance</li>
+                            <li>Exclusive territory rights (10 KM radius)</li>
+                            <li>24/7 customer support</li>
+                            <li>Regular business development sessions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="franchise-form">
+                    <h4>Apply for Franchise Today</h4>
+                    <div class="form-highlight">
+                        <p><i class="fas fa-star"></i> Limited slots available in each city</p>
+                    </div>
+                    <form id="franchiseForm">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <select required>
+                            <option value="">Select Preferred City</option>
+                            <option value="noida">Noida</option>
+                            <option value="lucknow">Lucknow</option>
+                            <option value="dehradun">Dehradun</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="chandigarh">Chandigarh</option>
+                        </select>
+                        <textarea placeholder="Tell us about your business experience and investment capacity"></textarea>
+                        <button type="submit" class="btn btn-primary">Apply Now - ₹2.5L Investment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        
+    <!-- Locations Section -->
+    <section id="locations" class="locations">
+        <div class="container">
+            <h2 class="section-title">Service Locations</h2>
+            <p class="section-subtitle">We proudly serve across 5 major cities in North India with comprehensive EV infrastructure</p>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Noida</h3>
+                    <p>Complete EV ecosystem with multiple charging and swapping stations across sectors</p>
+                    <div class="location-features">
+                        <span>✓ 15+ Charging Stations</span>
+                        <span>✓ Battery Swapping Network</span>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Lucknow</h3>
+                    <p>Expanding network covering major commercial and residential areas of the capital city</p>
+                    <div class="location-features">
+                        <span>✓ 12+ Service Points</span>
+                        <span>✓ City-wide Coverage</span>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dehradun</h3>
+                    <p>Hill station friendly vehicles with robust battery solutions for challenging terrains</p>
+                    <div class="location-features">
+                        <span>✓ Hill-optimized Vehicles</span>
+                        <span>✓ Extended Range Batteries</span>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Jaipur</h3>
+                    <p>Heritage city coverage with modern EV infrastructure and tourist-friendly solutions</p>
+                    <div class="location-features">
+                        <span>✓ Tourist Route Coverage</span>
+                        <span>✓ Heritage City Network</span>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Chandigarh</h3>
+                    <p>Smart city integration with advanced charging network and modern infrastructure</p>
+                    <div class="location-features">
+                        <span>✓ Smart City Integration</span>
+                        <span>✓ Advanced Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+    {% comment %} Contact page {% endcomment %}
+    <section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+            Ready to join the EV revolution? Contact us for franchise opportunities or vehicle inquiries
+        </p>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong>
+                        <span>+91 9876543210</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <span>info@zmr.com</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Head Office</strong>
+                        <span>Sector 62, Noida, Uttar Pradesh 201309</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Business Hours</strong>
+                        <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h4>Send us a Message</h4>
+
+                <!-- Django form integration -->
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+                    <select name="inquiry_type" required>
+                        <option value="">Select Inquiry Type</option>
+                        <option value="franchise">Franchise Opportunity</option>
+                        <option value="vehicle">Vehicle Purchase</option>
+                        <option value="service">Service Support</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <textarea name="message" placeholder="Your Message or Questions" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+ {% comment %} <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Our Mobility Services
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Eco-friendly rentals with 10km charging station access and battery swaps for seamless rides.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {% for service in services %}
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">{{ service.name }}</h3>
+                    <p class="text-gray-600 mb-1">{{ service.short_desc }}</p>
+                    <p class="text-gray-500 text-sm">{{ service.description }}</p>
+                </div>
+                {% empty %}
+                <div class="col-span-full text-center py-8">
+                    <p>No services available yet. Add some in the admin!</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Services</h2>
+                <p class="subtitle">Tailored solutions for urban mobility, rentals, and business growth.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: 2-Wheeler Rentals -->
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>2-Wheeler Rentals</h3>
+                    <p class="short-desc">Electric scooters and bikes</p>
+                    <p>Rent modern electric 2-wheelers for daily commutes with flexible hourly/daily plans and competitive pricing. Perfect for quick city rides.</p>
+                    <button class="btn btn-small btn-primary">Rent Now</button>
+                </div>
+
+                <!-- Service 2: 3-Wheeler Rentals -->
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>3-Wheeler Rentals</h3>
+                    <p class="short-desc">Electric auto rickshaws</p>
+                    <p>Commercial and personal electric 3-wheeler rentals for efficient urban transportation. Ideal for deliveries or family trips.</p>
+                    <button class="btn btn-small btn-primary">Rent Now</button>
+                </div>
+
+                <!-- Service 3: Franchise Opportunities -->
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Franchise Opportunities</h3>
+                    <p class="short-desc">Business partnership programs</p>
+                    <p>Join our franchise network and become a ZMR Mobility partner. Get comprehensive support, training, and revenue sharing to expand our eco-mobility reach.</p>
+                    <button class="btn btn-small btn-secondary">Learn More</button>
+                </div>
+
+                <!-- Service 4: Charging Network -->
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Charging Network</h3>
+                    <p class="short-desc">10km range support</p>
+                    <p>Access our extensive network of charging stations within 10km of every rental location, including quick battery swap services for uninterrupted rides.</p>
+                    <button class="btn btn-small btn-secondary">Find Stations</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franchise Details Section -->
+    <section id="franchise" class="section franchise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Franchise with ZMR Mobility</h2>
+                <p class="subtitle">Build your business with our proven model and eco-friendly infrastructure.</p>
+            </div>
+            
+            <div class="franchise-content">
+                <div class="franchise-card">
+                    <h3>Why Partner with Us?</h3>
+                    <p>Our franchise program offers low entry barriers, ongoing support, and access to our 10km charging ecosystem. Earn from rentals, swaps, and station fees while promoting sustainable transport.</p>
+                    <ul class="benefits-list">
+                        <li>Comprehensive training and operational support</li>
+                        <li>Exclusive territory within 10km radius</li>
+                        <li>Marketing materials and digital tools</li>
+                        <li>Revenue sharing up to 40% on rentals</li>
+                        <li>Battery management and maintenance included</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charging Network Highlight -->
+    <section id="charging" class="section charging">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our 10km Charging Advantage</h2>
+                <p class="subtitle">Never run out of power—our network ensures seamless mobility.</p>
+            </div>
+            <div class="charging-content">
+                <p class="highlight-text">
+                    Every ZMR Mobility rental includes complimentary access to charging stations within 10km. 
+                    Swap batteries in minutes and extend your range effortlessly. Eco-friendly and hassle-free!
+                </p>
+                <img src="https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=10km+Charging+Network+Map" alt="ZMR Mobility 10km charging network map with stations and battery swap points" class="charging-image">
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+{% endblock %}
+

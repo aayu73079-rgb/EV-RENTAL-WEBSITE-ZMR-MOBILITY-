@@ -1,0 +1,109 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZMR Mobility</title>
+
+    <!-- Bootstrap -->
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> {% endcomment %}
+    <!-- Custom CSS -->
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/LOGO.jpg' %}">
+    
+    
+   
+
+
+
+  </head>
+  
+  <body>
+        <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" style="display:flex">
+                <img src="{% static 'images/LOGO.jpg' %}" style="height:50px">
+                <div>
+                    <h2>ZMR Mobility</h2>
+                <p class="navTxt">Private Limited</p>
+                </div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="/home/" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a> 
+                {% comment %} <a href="/services/">Services</a> {% endcomment %}
+
+                <a href="#locations" class="nav-link">Locations</a>
+                <a href="#franchise" class="nav-link">Franchise</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="{% static 'images/LOGO.jpg' %}" style="height:50px">
+                    <h3>ZMR Mobility</h3>
+                    <p>Leading the electric vehicle revolution with innovative solutions for sustainable urban transportation across North India.</p>
+                    <div class="footer-highlight">
+                        <strong>Franchise Investment: ₹2.5 Lakhs</strong><br>
+                        <span>20 E-Scooters + Battery Swapping Setup</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Electric Scooters</li>
+                        <li>3-Wheeler Vehicles</li>
+                        <li>Battery Swapping Network</li>
+                        <li>Franchise Opportunities</li>
+                        <li>Charging Infrastructure</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Locations</h4>
+                    <ul>
+                        <li>Noida, Uttar Pradesh</li>
+                        <li>Lucknow, Uttar Pradesh</li>
+                        <li>Dehradun, Uttarakhand</li>
+                        <li>Jaipur, Rajasthan</li>
+                        <li>Chandigarh, Punjab</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Details</h4>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sector 62, Noida, UP</p>
+                    <div class="franchise-cta">
+                        <button class="btn btn-secondary" onclick="scrollToSection('franchise')">
+                            Join Franchise - ₹2.5L
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ZMR Mobility. All rights reserved. | Franchise Investment: ₹2.5 Lakhs</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/index.js' %}" ></script>
+  </body>
+</html>

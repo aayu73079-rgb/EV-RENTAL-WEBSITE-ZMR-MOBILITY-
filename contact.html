@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Contact Us</h2>
+<p>Fill the form and we'll get back to you.</p>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+            Ready to join the EV revolution? Contact us for franchise opportunities or vehicle inquiries
+        </p>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong>
+                        <span>+91 9876543210</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <span>info@zmr.com</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Head Office</strong>
+                        <span>Sector 62, Noida, Uttar Pradesh 201309</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Business Hours</strong>
+                        <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h4>Send us a Message</h4>
+
+                <!-- Django form integration -->
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+                    <select name="inquiry_type" required>
+                        <option value="">Select Inquiry Type</option>
+                        <option value="franchise">Franchise Opportunity</option>
+                        <option value="vehicle">Vehicle Purchase</option>
+                        <option value="service">Service Support</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <textarea name="message" placeholder="Your Message or Questions" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
